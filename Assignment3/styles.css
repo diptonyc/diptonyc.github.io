@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    background-color: bisque;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* Menu */
+  .menu {
+    width: 25%;
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 10px;
+    border: 2px solid #87ceeb;
+    background: linear-gradient(135deg, #b0e0e6, #87ceeb);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu li {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #b0e0e6;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .menu li:hover {
+    background-color: #f10404;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+  .menu li:active {
+    transform: scale(0.97);
+    background-color: #f10404;
+  }
+  
+  /* Content Grid */
+  .content-grid {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+  }
+  
+  /* Each block is centered and 80% of its grid cell */
+  .block {
+    width: 80%;
+    border: solid orange;
+    border-radius: 0px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+    text-align: center;
+    background-color: transparent;
+  }
+  
+  /* Image-specific block overrides */
+  .image-block {
+    padding: 0;
+    border: red;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  .image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Block Headers */
+  .block-header {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  /* Block Content */
+  .block-content {
+    font-size: 1.1em;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+  
+    .menu {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .menu li {
+      flex: 1;
+      min-width: 120px;
+    }
+  
+    .content-grid {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  
+    .block {
+      width: 90%;
+    }
+  }
+  
