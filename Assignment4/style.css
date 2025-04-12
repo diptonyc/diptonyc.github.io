@@ -1,0 +1,90 @@
+body {
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.container {
+  background-color: none; /* Transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.clock-box {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 0px solid #000; /* Black border for the clock */
+  overflow: hidden; /* Hide overflow for clock hands */ 
+
+
+}
+
+.clock-base {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  
+
+}
+
+.hour-hand,
+.minute-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  z-index: 2;
+}
+
+/* Clock hand styles */
+.hour-hand {
+  width: 10px;
+  height: 100px;
+  margin-left: -5px;
+  margin-top: -100px;
+  animation: rotate-hour 10s forwards;
+  border-radius: 5px; /* Rounded edges for hour hand */
+  background: linear-gradient(to bottom, #ff0008, #f32703); /* Gradient for hour hand */
+  transition: transform 0.5s ease; /* Smooth transition for hour hand */
+  transform: rotate(90deg); /* Initial position at 3pm */
+  background: linear-gradient(to bottom, #ff0008, #f32703); /* Gradient for hour hand */
+
+}
+
+.minute-hand {
+  width: 6px;
+  height: 130px;
+  margin-left: -3px;
+  margin-top: -130px;
+  animation: rotate-minute 10s forwards;
+  border-radius: 3px; /* Rounded edges for minute hand */
+  background: linear-gradient(to bottom, #00ff00, #00ff7f); /* Gradient for minute hand */
+  transition: transform 0.5s ease; /* Smooth transition for minute hand */
+  transform: rotate(0deg); /* Initial position at 12pm */
+}
+
+/* Animations */
+@keyframes rotate-hour {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(120deg); /* 3pm to 4pm */
+  }
+}
+
+@keyframes rotate-minute {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
