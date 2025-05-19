@@ -1,0 +1,61 @@
+/* Navbar shadow */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Nav link hover */
+.nav-link:hover {
+  color: #fff !important;
+  background-color: #0d6efd;
+  border-radius: 10px;
+}
+
+/* Image zoom on hover */
+.img-hover:hover,
+.card-img-top:hover,
+.small-img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Button hover styling */
+.btn-hover:hover {
+  background-color: #198754 !important;
+  color: white;
+}
+
+/* Footer link styling */
+.footer-link {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* Footer link hover effect */
+.footer-link:hover {
+  background-color: #ffc107;
+  color: #000 !important;
+  text-decoration: none;
+}
+
+/* Social icon hover effect */
+.social-icon:hover {
+  color: #0d6efd !important;
+  transition: 0.3s ease;
+}
+
+/* Footer text and caption styling */
+.figure {
+  text-align: center;
+}
+
+.figure-caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Body padding top to prevent navbar overlap */
+body {
+  padding-top: 70px;
+}
